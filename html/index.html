@@ -3,33 +3,68 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="http://www.daum/net" />
     <meta property="og:title" content="seadronix" />
     <meta property="og:site_name" content="seadronix" />
     <meta property="og:description" content="해양강국을 꿈꾸는 ~~~" />
-    <meta property="og:image" content="../images/layout/main-overview-logo-1.jpg" />
+    <meta
+      property="og:image"
+      content="../images/layout/main-overview-logo-1.jpg"
+    />
     <title>STX 건설</title>
-    <link rel="shortcut icon" href="../images/layout/favicon.png" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="../images/layout/favicon.png"
+      type="image/x-icon"
+    />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
     <!-- google 웹폰트 -->
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css" />
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css"
+    />
     <!-- pretendard -->
     <link rel="stylesheet" href="../css/reset.css" />
     <link rel="stylesheet" href="../css/common.css" />
     <link rel="stylesheet" href="../css/layout.css" />
     <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../css/splitting.css" />
+    <script src="../js/swiper-bundle.min.js"></script>
+    <script src="../js/splitting.min.js"></script>
+    <script src="../js/gsap/gsap.min.js"></script>
+    <script src="../js/main.js" defer></script>
   </head>
   <body>
     <header class="header">
       <h1 class="logo">
         <a href="">
-          <img src="../images/layout/smstxconst_logo.png" alt="" class="logo__img" />
+          <img
+            src="../images/layout/smstxconst_logo.png"
+            alt=""
+            class="logo__img"
+          />
         </a>
       </h1>
       <nav class="gnb">
@@ -99,19 +134,293 @@
     <main class="main">
       <section class="main-visual">
         <h2 class="hidden">main visual area</h2>
-        <ul>
-          <li class="main-visual--visual01"></li>
-          <li class="main-visual--visual02"></li>
-          <li class="main-visual--visual03"></li>
-        </ul>
-        <div class="main-visual__txt">
+        <div class="visual__list">
+          <ul class="swiper-wrapper">
+            <li class="visual01 swiper-slide"></li>
+            <li class="visual02 swiper-slide"></li>
+            <li class="visual03 swiper-slide"></li>
+          </ul>
+          <div class="pagination"></div>
+        </div>
+        <div class="red"></div>
+        <div class="main-visual__txt" data-splitting>
           <p class="main-visual__txt--main">
             BEST OF THE WORLD <br />
             STX Engineering & Construction
           </p>
-          <p class="main-visual__txt--main">세계최고를 향해 STX건설이 힘차게 질주합니다!</p>
+          <p class="main-visual__txt--main__sub">
+            세계최고를 향해 STX건설이 힘차게 질주합니다!
+          </p>
+        </div>
+      </section>
+      <!------- main-visual end -------->
+
+      <section class="business">
+        <div class="business__txt">
+          <h2 class="business__txt--main">
+            STX Engineering & Construction Business
+          </h2>
+          <div class="red"></div>
+          <p class="business__txt--main__sub">
+            STX건설은 건문 역량 강화를 통해 건축, 주택, 토목, 플랜트 사업
+            영역에서 <br />
+            탁월한 성과를 인정받은 기업으로 자연과 기술의 공간에 인류의 가치를
+            추구합니다.
+          </p>
+        </div>
+
+        <div class="business_list">
+          <ul class="btn_area">
+            <li>
+              <div class="list1">
+                <a href="">
+                  <div class="img_area">
+                    <div class="text">건축사업</div>
+                  </div>
+                  <div class="hover_area">
+                    <div class="text">건축사업</div>
+                    <div class="icon"></div>
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="list2">
+                <a href="">
+                  <div class="img_area">
+                    <div class="text">주택사업</div>
+                  </div>
+                  <div class="hover_area">
+                    <div class="text">주택사업</div>
+                    <div class="icon"></div>
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="list3">
+                <a href="">
+                  <div class="img_area">
+                    <div class="text">토목사업</div>
+                  </div>
+                  <div class="hover_area">
+                    <div class="text">토목사업</div>
+                    <div class="icon"></div>
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="list4">
+                <a href="">
+                  <div class="img_area">
+                    <div class="text">플랜트/공작기계사업</div>
+                  </div>
+                  <div class="hover_area">
+                    <div class="text">플랜트/공작기계사업</div>
+                    <div class="icon"></div>
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="list5">
+                <a href="">
+                  <div class="img_area">
+                    <div class="text">해외사업</div>
+                  </div>
+                  <div class="hover_area">
+                    <div class="text">해외사업</div>
+                    <div class="icon"></div>
+                  </div>
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!----- business end ----->
+
+      <section class="news">
+        <div class="news1">
+          <div class="news1_txt newsTxt">
+            <h2>공지사항</h2>
+            <ul>
+              <hr />
+              <li>
+                <div><a href="">사무실 이전 안내</a></div>
+                <div class="verArrow">
+                  <span class="vertical">&#124;</span>
+                  <span class="material-symbols-outlined arrow">
+                    arrow_forward
+                  </span>
+                </div>
+              </li>
+              <hr />
+              <li>
+                <div>
+                  <a href=""
+                    >에스티엑스건설자산관리 주식회사 해산결의에 따른 채권신고</a
+                  >
+                </div>
+                <div class="verArrow">
+                  <span class="vertical">&#124;</span>
+                  <span class="material-symbols-outlined arrow">
+                    arrow_forward
+                  </span>
+                </div>
+              </li>
+              <hr />
+              <li>
+                <div>
+                  <a href=""
+                    >에스티엑스건설자산관리 주식회사 해산결의에 따른 채권신고</a
+                  >
+                </div>
+                <div class="verArrow">
+                  <span class="vertical">&#124;</span>
+                  <span class="material-symbols-outlined arrow">
+                    arrow_forward
+                  </span>
+                </div>
+              </li>
+              <hr />
+              <li>
+                <div><a href="">2021년도 협력업체 모집공고</a></div>
+                <div class="verArrow">
+                  <span class="vertical">&#124;</span>
+                  <span class="material-symbols-outlined arrow">
+                    arrow_forward
+                  </span>
+                </div>
+              </li>
+              <hr />
+            </ul>
+          </div>
+        </div>
+        <div class="news2">
+          <div class="news2_txt newsTxt">
+            <h2>보도자료</h2>
+            <ul>
+              <hr />
+              <li>
+                <div><a href="">회생절차 종료</a></div>
+                <div class="verArrow">
+                  <span class="vertical">&#124;</span>
+                  <span class="material-symbols-outlined arrow">
+                    arrow_forward
+                  </span>
+                </div>
+              </li>
+              <hr />
+              <li>
+                <div>
+                  <a href="">STX건설, 춘천 레고랜드 테마파크 시공사 ‘선정’</a>
+                </div>
+                <div class="verArrow">
+                  <span class="vertical">&#124;</span>
+                  <span class="material-symbols-outlined arrow">
+                    arrow_forward
+                  </span>
+                </div>
+              </li>
+              <hr />
+              <li>
+                <div><a href="">STX건설, 2018년 성장 '청신호'</a></div>
+                <div class="verArrow">
+                  <span class="vertical">&#124;</span>
+                  <span class="material-symbols-outlined arrow">
+                    arrow_forward
+                  </span>
+                </div>
+              </li>
+              <hr />
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-------- news end ------->
+
+      <section class="inquiry">
+        <div class="inquiry_inside inside01">
+          <div class="inquiry_inside_txt">
+            <h2>FAQ</h2>
+            <p>
+              STX건설 고객님들을 위해 <br />
+              자주하시는 질문과 답변을 정리하였습니다.
+            </p>
+          </div>
+          <div class="inquiry_inside_img">
+            <img src="../images/main/tv.png" alt="" />
+          </div>
+        </div>
+        <div class="inquiry_inside inside02">
+          <div class="inquiry_inside_txt">
+            <h2>고객문의</h2>
+            <p>
+              STX건설 고객상담은 고객만족 <br />
+              서비스를 위하여 최선을 다하고 있습니다.
+            </p>
+          </div>
+          <div class="inquiry_inside_img">
+            <img src="../images/main/headphone.png" alt="headphone" />
+          </div>
+        </div>
+      </section>
+      <!---------inquiry end ---------->
+
+      <section class="about">
+        <div class="about_txt">
+          <h2>ABOUT US</h2>
+          <div class="about_txt_under">
+            <div class="red"></div>
+            <div class="about_txt_under_sub">
+              <h3>고객의 믿음과 신뢰로 성장하는 STX건설이 되겠습니다.</h3>
+              <p>
+                STX건설 이름으로 세계 어디에서, 세계 누구와 겨뤄도 자신 있는
+                세계 최고를 향해 웅비합니다. STX건설이라는 날개를 하나 더 피고
+                세계로, 미래로 나아가는 STX건설의 힘찬 비상을 주목해 주십시오.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="about_img">
+          <img src="../images/main/img_about.png" alt="" />
+        </div>
+      </section>
+      <!-------- about end --------->
+
+      <section class="manage">
+        <div class="manage_img">
+          <a href=""><img src="../images/main/manage (1).png" alt="img" /></a>
+          <h3>경영이념</h3>
+        </div>
+        <div class="manage_img">
+          <a href=""><img src="../images/main/manage (2).png" alt="img" /></a>
+          <h3>공유가치</h3>
+        </div>
+        <div class="manage_img">
+          <a href=""><img src="../images/main/manage (3).png" alt="img" /></a>
+          <h3>중장기전략</h3>
         </div>
       </section>
     </main>
+
+    <footer class="footer">
+      <div class="footer_img">
+        <img src="../images/layout/smstxconst_logo.png" alt="" />
+      </div>
+      <div class="footer_desc">
+        <p>
+          부산사무소 : (48938) 부산광역시 중구 충장대로5번길 22 (중앙동4가)
+          SM상선빌딩 7층 TEL : 051-791-3000 · FAX : 051-791-3099
+        </p>
+        <p>
+          창원사무소 : (51494) 경상남도 창원시 성산구 중앙대로 84번길 3,
+          9층904호 · TEL : 055-263-2060
+        </p>
+        <p>Copyright ⓒ 2018 STX CONSTRUCTION. LTD. All Rights Reserved.</p>
+      </div>
+    </footer>
   </body>
 </html>
