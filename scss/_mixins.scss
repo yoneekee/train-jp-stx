@@ -21,3 +21,22 @@
   margin-left: $margin;
   font-family: "Material Icons";
 }
+
+@mixin ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+// 여러 줄 엘립시스
+@mixin multiEllipsis($line: 2, $lineHeight: 1.5) {
+  // line : 몇 줄을 기본으로 하겠다
+  display: -webkit-box;
+  line-height: $lineHeight;
+  height: $lineHeight * $line * 1em; // em은 글자 하나의 높이
+  overflow: hidden;
+  -webkit-line-clamp: $line; // 몇 줄 단위를 기본으로 줄 바꿈을 하겠느냐
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+  box-sizing: content-box;
+}
