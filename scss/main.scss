@@ -261,13 +261,12 @@
 
 .news {
   @include center();
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
 
   h2 {
     font-size: clamp(32px, 5vw, 48px);
     font-weight: 900;
-    margin-bottom: 30px;
   }
 
   a {
@@ -280,6 +279,7 @@
     position: absolute;
     color: #fff;
     padding: 100px 50px;
+    margin: 0 50px;
 
     ul {
       margin-top: 30px;

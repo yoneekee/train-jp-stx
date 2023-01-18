@@ -240,13 +240,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
 }
 .news h2 {
   font-size: clamp(32px, 5vw, 48px);
   font-weight: 900;
-  margin-bottom: 30px;
 }
 .news a {
   font-size: clamp(12px, 3vw, 18px);
@@ -257,6 +256,7 @@
   position: absolute;
   color: #fff;
   padding: 100px 50px;
+  margin: 0 50px;
 }
 .news .newsTxt ul {
   margin-top: 30px;
