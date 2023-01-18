@@ -1,26 +1,45 @@
-// data-splitting 기능
 Splitting();
+//x,y,z
+//transfotm:translateX()
 
-// gsap : to, from
-// x,y,z : transform
-//gsap.to(".main-visual__txt .char", { opacity: 0, x: 300, duration: 1 });
+const btnAuto = document.querySelector(".btn--auto");
+const gnb = document.querySelector(".gnb");
+const header = document.querySelector(".header");
+
+gnb.addEventListener("mouseenter", () => {
+  header.classList.add("on");
+});
+
+gnb.addEventListener("mouseleave", () => {
+  header.classList.remove("on");
+});
+
+btnAuto.addEventListener("click", function () {
+  if (mainVisualSwiper.autoplay.paused) {
+    mainVisualSwiper.autoplay.run();
+    btnAuto.classList.remove("off");
+  } else {
+    mainVisualSwiper.autoplay.pause();
+    btnAuto.classList.add("off");
+  }
+});
+
 gsap.from(".main-visual__txt .char", {
   opacity: 0,
-  y: 300,
+  y: 100,
   duration: 1,
-  stagger: 0.01,
+  stagger: 0.02,
+  ease: "power4",
 });
-
-//Swiper
-new Swiper(".visual__list", {
-  //slide,cube,fade,
-  effect: "cube",
+const mainVisualSwiper = new Swiper(".main-visual", {
+  loop: true,
+  speed: 1000,
+  autoplay: {
+    delay: 2000,
+  },
   pagination: {
-    el: ".visual__list .pagination",
+    el: ".main-visual .pagination .pagination-box",
     type: "bullets",
-    clickable: true,
-  },
-  cubeEffect: {
-    shadow: false,
   },
 });
+console.log(mainVisualSwiper.autoplay.paused);

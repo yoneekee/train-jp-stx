@@ -17,22 +17,9 @@ body {
   position: fixed;
   width: 100%;
   overflow: hidden;
-  z-index: 99;
   //background-color: #fff;
+  z-index: 99;
   transition: all 0.25s ease;
-
-  &:after {
-    content: "";
-    display: block;
-    height: 400px;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    position: absolute;
-    left: 0;
-    top: 80px;
-    z-index: -1;
-  }
-
   &:before {
     content: "";
     display: block;
@@ -44,11 +31,20 @@ body {
     top: 0;
     z-index: -1;
   }
-
-  &.on {
-    height: 350px;
+  &:after {
+    content: "";
+    display: block;
+    height: 420px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    left: 0;
+    top: 80px;
+    z-index: -1;
   }
-
+  &.on {
+    height: 420px;
+  }
   .logo {
     a {
       display: flex;
@@ -60,6 +56,7 @@ body {
     }
   }
   .gnb {
+    transition: all 0.25s ease;
     &__list {
       display: flex;
       justify-content: center;
@@ -71,17 +68,37 @@ body {
           display: flex;
           align-items: center;
           padding: 0 40px;
+          &:hover {
+            color: $red;
+            font-weight: 900;
+          }
         }
       }
       &--sub {
         padding: 30px 0;
+        color: #fff;
         li {
           a {
+            line-height: 1.5;
             display: block;
             padding: 5px 0 5px 40px;
+            &:hover {
+              color: $red;
+              font-weight: 900;
+            }
           }
         }
       }
+    }
+  }
+
+  .language {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    gap: 0 20px;
+    .on {
+      color: $blue;
     }
   }
 }
